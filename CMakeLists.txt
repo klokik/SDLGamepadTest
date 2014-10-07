@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(gamepad_test)
 
-cmake_policy(SET CMP0037 NEW)
+if("${CMAKE_VERSION}" VERSION_GREATER "3.0")
+	cmake_policy(SET CMP0037 NEW)
+endif()
 
 set(CMAKE_CXX_FLAGS "-std=c++11 -g")
 
